@@ -2,7 +2,7 @@
 public class Aviones {
 	
 	//	ATRIBUTOS
-	private String procedencia;
+	
 	private String matricula;
 	private String marca;
 	private String modelo;
@@ -11,8 +11,8 @@ public class Aviones {
 	
 	
 	//CONTRUCTORES
-	public Aviones(String procedencia, String matricula, String marca, String modelo, int capacidad_tripulacion, int capacidad_pasajeros) {
-		this.procedencia = procedencia;
+	public Aviones( String matricula, String marca, String modelo, int capacidad_tripulacion, int capacidad_pasajeros) {
+		
 		this.matricula = matricula;
 		this.marca = marca;
 		this.modelo = modelo;
@@ -21,7 +21,7 @@ public class Aviones {
 	}
 	
 	public Aviones() {
-		this.procedencia = "Pais de procedencia";
+		
 		this.matricula = "XX-XXX";
 		this.marca = "Marca";
 		this.modelo = "Modelo";
@@ -31,13 +31,6 @@ public class Aviones {
 	
 	
 	//GETTERS & SETTERS
-	public String getProcedencia() {
-		return procedencia;
-	}
-
-	public void setProcedencia(String procedencia) {
-		this.procedencia = procedencia;
-	}
 
 	public String getMatricula() {
 		return matricula;

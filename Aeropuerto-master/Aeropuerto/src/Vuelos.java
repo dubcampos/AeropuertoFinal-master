@@ -46,7 +46,35 @@ public class Vuelos {
 		lista_pasajeros.add(p5);
 		lista_pasajeros.add(p6);
 		
+		this.lista_pilotos = new ArrayList<Pilotos>();
+		Pilotos pi1 = new Pilotos();
+		Pilotos pi2 = new Pilotos();
+		Pilotos pi3 = new Pilotos();
+		Pilotos pi4 = new Pilotos();
+		Pilotos pi5 = new Pilotos();
+		Pilotos pi6 = new Pilotos();
 		
+		lista_pilotos.add(pi1);
+		lista_pilotos.add(pi2);
+		lista_pilotos.add(pi3);
+		lista_pilotos.add(pi4);
+		lista_pilotos.add(pi5);
+		lista_pilotos.add(pi6);
+		
+		this.lista_aviones = new ArrayList<Aviones>();
+		Aviones avion1 = new Aviones();
+		Aviones avion2 = new Aviones();
+		Aviones avion3 = new Aviones();
+		Aviones avion4 = new Aviones();
+		Aviones avion5 = new Aviones();
+		Aviones avion6 = new Aviones();
+		
+		lista_aviones.add(avion1);
+		lista_aviones.add(avion2);
+		lista_aviones.add(avion3);
+		lista_aviones.add(avion4);
+		lista_aviones.add(avion5);
+		lista_aviones.add(avion6);
 		
 	}
 	
@@ -169,6 +197,21 @@ public class Vuelos {
 				System.out.println("Sexo: "+pilotos.getId_piloto());
 				System.out.println("============================");
 			}
+		}
+	}
+	
+	public void GenerarAviones() {
+		Aviones avion1 = new Aviones("XHG-589-PE", "Boeing", "747", 3, 660);
+		lista_aviones.add(avion1);
+		
+	}
+	
+	public void ImprimirAvion( String matricula) {
+		GenerarAviones();
+		
+		for (Aviones aviones : lista_aviones) {
+			if (matricula == aviones.getMatricula())
+			aviones.Imprimir();
 		}
 	}
 	
