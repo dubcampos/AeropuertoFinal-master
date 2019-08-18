@@ -78,17 +78,19 @@ public class Aeropuerto {
 		lista_vuelos.add(vuelo1);	
 	}
 	
-	public void Imprimir() {
+	public void ImprimirVuelos(String ciudad) {
 		GenerarVuelos();
-		System.out.println("============================");
-		System.out.println("Aeropuerto: "+getNombre());
-		System.out.println("Ciudad: "+getCiudad());
-		System.out.println("ID Aeropuerto: "+getId_aeropueto());
-		System.out.println("============================");
-		
-		Vuelos vu = new Vuelos();
-		//IMPRIMIR VUELO
-		vu.Imprimir();
+		if(ciudad == getCiudad()) {
+			System.out.println("============================");
+			System.out.println("Aeropuerto: "+getNombre());
+			System.out.println("Ciudad: "+getCiudad());
+			System.out.println("ID Aeropuerto: "+getId_aeropueto());
+			System.out.println("============================");
+			
+			Vuelos vu = new Vuelos();
+			//IMPRIMIR VUELO
+			vu.Imprimir();
+		}
 	}
 	
 	
