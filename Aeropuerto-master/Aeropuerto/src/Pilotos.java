@@ -25,7 +25,15 @@ public class Pilotos extends Personas{
 	//METODOS
 	
 	
-	
+	public void Imprimir() {
+		System.out.println("==========PILOTO==========");
+		System.out.println("ID Piloto: "+getId_piloto());
+		System.out.println("Nombre: " +getNombre());
+		System.out.println("Documento: "+getDocumento());
+		System.out.println("Edad: "+getEdad());
+		System.out.println("Sexo: "+getSexo());
+		System.out.println("============================");
+	}
 	
 	
 	

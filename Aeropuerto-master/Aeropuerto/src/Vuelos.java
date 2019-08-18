@@ -32,51 +32,9 @@ public class Vuelos {
 		this.destino = "Punto B";
 		this.retraso = false;
 		this.lista_pasajeros = new ArrayList<Pasajeros>() ;
-		Pasajeros p1 = new Pasajeros();
-		Pasajeros p2 = new Pasajeros();
-		Pasajeros p3 = new Pasajeros();
-		Pasajeros p4 = new Pasajeros();
-		Pasajeros p5 = new Pasajeros();
-		Pasajeros p6 = new Pasajeros();
-		
-		lista_pasajeros.add(p1);
-		lista_pasajeros.add(p2);
-		lista_pasajeros.add(p3);
-		lista_pasajeros.add(p4);
-		lista_pasajeros.add(p5);
-		lista_pasajeros.add(p6);
-		
 		this.lista_pilotos = new ArrayList<Pilotos>();
-		Pilotos pi1 = new Pilotos();
-		Pilotos pi2 = new Pilotos();
-		Pilotos pi3 = new Pilotos();
-		Pilotos pi4 = new Pilotos();
-		Pilotos pi5 = new Pilotos();
-		Pilotos pi6 = new Pilotos();
-		
-		lista_pilotos.add(pi1);
-		lista_pilotos.add(pi2);
-		lista_pilotos.add(pi3);
-		lista_pilotos.add(pi4);
-		lista_pilotos.add(pi5);
-		lista_pilotos.add(pi6);
-		
 		this.lista_aviones = new ArrayList<Aviones>();
-		Aviones avion1 = new Aviones();
-		Aviones avion2 = new Aviones();
-		Aviones avion3 = new Aviones();
-		Aviones avion4 = new Aviones();
-		Aviones avion5 = new Aviones();
-		Aviones avion6 = new Aviones();
-		
-		lista_aviones.add(avion1);
-		lista_aviones.add(avion2);
-		lista_aviones.add(avion3);
-		lista_aviones.add(avion4);
-		lista_aviones.add(avion5);
-		lista_aviones.add(avion6);
-		
-	}
+		}
 	
 	//GETTERS & SETTERS
 	public String getHora() {
@@ -151,12 +109,7 @@ public class Vuelos {
 	public void ImprimirPasajeros() {
 		GenerarPasajeros();
 		for (Pasajeros pasajeros : lista_pasajeros) {
-			System.out.println("==========PASAJERO==========");
-			System.out.println("Nombre: " +pasajeros.getNombre());
-			System.out.println("Documento: "+pasajeros.getDocumento());
-			System.out.println("Edad: "+pasajeros.getEdad());
-			System.out.println("Sexo: "+pasajeros.getSexo());
-			System.out.println("============================");
+			pasajeros.Imprimir();
 			
 		}
 	}
@@ -189,19 +142,14 @@ public class Vuelos {
 		
 		for (Pilotos pilotos : lista_pilotos) {
 			if (pilotoid==pilotos.getId_piloto()) {
-				System.out.println("==========PILOTO==========");
-				System.out.println("Nombre: " +pilotos.getNombre());
-				System.out.println("Documento: "+pilotos.getDocumento());
-				System.out.println("Edad: "+pilotos.getEdad());
-				System.out.println("Sexo: "+pilotos.getSexo());
-				System.out.println("Sexo: "+pilotos.getId_piloto());
-				System.out.println("============================");
+				pilotos.Imprimir();
 			}
 		}
 	}
 	
 	public void GenerarAviones() {
 		Aviones avion1 = new Aviones("XHG-589-PE", "Boeing", "747", 3, 660);
+		Aviones avion2 = new Aviones("TGY-812-PE", "Airbus", "A320", 2, 220);
 		lista_aviones.add(avion1);
 		
 	}

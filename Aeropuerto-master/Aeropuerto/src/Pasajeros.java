@@ -13,6 +13,19 @@ public class Pasajeros extends Personas{
 		}
 		
 		
+		public void Imprimir() {
+			
+			
+				System.out.println("==========PASAJERO==========");
+				System.out.println("Nombre: " +getNombre());
+				System.out.println("Documento: "+getDocumento());
+				System.out.println("Edad: "+getEdad());
+				System.out.println("Sexo: "+getSexo());
+				System.out.println("----------------------------");
+				
+			
+		}
+		
 		
 }
  

@@ -73,9 +73,11 @@ public class Aviones {
 	}
 	
 	public void Imprimir() {
-		System.out.println("===========AVION============");
-		System.out.println(getMarca()+" - "+getModelo() + " - "+ getMatricula());		
-		System.out.println("============================");
+		System.out.println("==========================AVION===========================");
+		System.out.println("Matricula: "+ getMatricula()+" | Marca: "+getMarca()+" | Modelo: "+getModelo());
+		System.out.println("Tripulacion en cabina: "+ getCapacidad_tripulacion());
+		System.out.println("Maxima capacidad de Pasajeros: "+ getCapacidad_pasajeros()+" personas");
+		System.out.println("==========================================================");
 	}
 	
 	
