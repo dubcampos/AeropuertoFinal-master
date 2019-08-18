@@ -16,12 +16,12 @@ public class Vuelos {
 	
 	//CONTRUCTORES
 
-	public Vuelos(String hora, String procedencia, String destino, boolean retraso, List<Pasajeros> lista_pasajero, List<Pilotos> lista_pilotos, List<Aviones> lista_aviones) {
+	public Vuelos(String hora, String procedencia, String destino, boolean retraso, List<Pasajeros> lista_pasajeros, List<Pilotos> lista_pilotos, List<Aviones> lista_aviones) {
 		this.hora = hora;
 		this.procedencia = Procedencia();
 		this.destino = destino;
 		this.retraso = retraso;
-		this.lista_pasajeros = lista_pasajero;
+		this.lista_pasajeros = lista_pasajeros;
 		this.lista_pilotos = lista_pilotos;
 		this.lista_aviones = lista_aviones;
 	}
@@ -61,7 +61,7 @@ public class Vuelos {
 		this.destino = destino;
 	}
 
-	public boolean isRetraso() {
+	public boolean getRetraso() {
 		return retraso;
 	}
 
@@ -70,6 +70,32 @@ public class Vuelos {
 	}
 	
 	
+	
+	
+	public List<Pasajeros> getLista_pasajeros() {
+		return lista_pasajeros;
+	}
+
+	public void setLista_pasajeros(List<Pasajeros> lista_pasajeros) {
+		this.lista_pasajeros = lista_pasajeros;
+	}
+
+	public List<Pilotos> getLista_pilotos() {
+		return lista_pilotos;
+	}
+
+	public void setLista_pilotos(List<Pilotos> lista_pilotos) {
+		this.lista_pilotos = lista_pilotos;
+	}
+
+	public List<Aviones> getLista_aviones() {
+		return lista_aviones;
+	}
+
+	public void setLista_aviones(List<Aviones> lista_aviones) {
+		this.lista_aviones = lista_aviones;
+	}
+
 	public String Procedencia() {
 		Aeropuerto procedencia = new Aeropuerto();
 		String ciudadA = procedencia.getCiudad();
@@ -102,8 +128,15 @@ public class Vuelos {
 	
 	public void Imprimir() {
 		System.out.println("============VUELO===========");
-		System.out.println("Ciudad Destino: "+procedencia);
+		System.out.println("Hora partida: "+hora);
+		System.out.println("Ciudad Destino: "+destino);
 		System.out.println("============================");
+		
+		ImprimirAvion("XHG-589-PE");
+		//IMPRIMIR LISTADO DE PILOTOS
+		ImprimirPiloto("1501");
+		//IMPRIMIR LISTADO DE PASAJEROS
+		ImprimirPasajeros();
 	}
 	
 	public void ImprimirPasajeros() {
@@ -150,7 +183,16 @@ public class Vuelos {
 	public void GenerarAviones() {
 		Aviones avion1 = new Aviones("XHG-589-PE", "Boeing", "747", 3, 660);
 		Aviones avion2 = new Aviones("TGY-812-PE", "Airbus", "A320", 2, 220);
+		Aviones avion3 = new Aviones("GYH-681-PE", "Boeing", "747", 3, 660);
+		Aviones avion4 = new Aviones("TGS-859-PE", "Boeing", "777", 2, 400);
+		Aviones avion5 = new Aviones("UJK-158-PE", "Airbus", "A320", 2, 220);
+		Aviones avion6 = new Aviones("SEF-983-PE", "Boeing", "777", 2, 400);
 		lista_aviones.add(avion1);
+		lista_aviones.add(avion2);
+		lista_aviones.add(avion3);
+		lista_aviones.add(avion4);
+		lista_aviones.add(avion5);
+		lista_aviones.add(avion6);
 		
 	}
 	
