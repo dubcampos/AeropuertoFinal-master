@@ -10,18 +10,20 @@ public class Vuelos {
 	private boolean retraso;
 	private List<Pasajeros> lista_pasajeros = new ArrayList <Pasajeros>();
 	private List<Pilotos> lista_pilotos = new ArrayList <Pilotos>();
+	private List<Aviones> lista_aviones = new ArrayList <Aviones>();
 	
 	
 	
 	//CONTRUCTORES
 
-	public Vuelos(String hora, String procedencia, String destino, boolean retraso, List<Pasajeros> lista_pasajero, List<Pilotos> lista_pilotos) {
+	public Vuelos(String hora, String procedencia, String destino, boolean retraso, List<Pasajeros> lista_pasajero, List<Pilotos> lista_pilotos, List<Aviones> lista_aviones) {
 		this.hora = hora;
 		this.procedencia = Procedencia();
 		this.destino = destino;
 		this.retraso = retraso;
 		this.lista_pasajeros = lista_pasajero;
 		this.lista_pilotos = lista_pilotos;
+		this.lista_aviones = lista_aviones;
 	}
 	
 	public Vuelos() {
@@ -30,12 +32,12 @@ public class Vuelos {
 		this.destino = "Punto B";
 		this.retraso = false;
 		this.lista_pasajeros = new ArrayList<Pasajeros>() ;
-		Pasajeros p1 = new Pasajeros("Pasajero1", 00, 'U', "00000000");
-		Pasajeros p2 = new Pasajeros("Pasajero2", 00, 'U', "00000000");
-		Pasajeros p3 = new Pasajeros("Pasajero3", 00, 'U', "00000000");
-		Pasajeros p4 = new Pasajeros("Pasajero4", 00, 'U', "00000000");
-		Pasajeros p5 = new Pasajeros("Pasajero5", 00, 'U', "00000000");
-		Pasajeros p6 = new Pasajeros("Pasajero6", 00, 'U', "00000000");
+		Pasajeros p1 = new Pasajeros();
+		Pasajeros p2 = new Pasajeros();
+		Pasajeros p3 = new Pasajeros();
+		Pasajeros p4 = new Pasajeros();
+		Pasajeros p5 = new Pasajeros();
+		Pasajeros p6 = new Pasajeros();
 		
 		lista_pasajeros.add(p1);
 		lista_pasajeros.add(p2);
